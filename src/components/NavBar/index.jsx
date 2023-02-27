@@ -1,9 +1,10 @@
 // ACA EL CODIGO DE REACT
+import CardWidget from "../CardWidget";
 import "./navbar.css";
 
 function NavBar() {
   return (
-    <div>
+    <div className="navbar">
       <ul>
         <li>
           <button>Mouse</button>
@@ -12,6 +13,7 @@ function NavBar() {
           <button>Teclado</button>
         </li>
       </ul>
+      <CardWidget />
     </div>
   );
 }

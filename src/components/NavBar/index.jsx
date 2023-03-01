@@ -2,10 +2,13 @@
 import CardWidget from "../CardWidget";
 import "./navbar.css";
 
-function NavBar() {
+function NavBar({ changeValue }) {
   return (
     <div className="navbar">
       <ul>
+        <li>
+          <button onClick={changeValue}>Cambiar valor del estado</button>
+        </li>
         <li>
           <button>Mouse</button>
         </li>

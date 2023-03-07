@@ -1,9 +1,10 @@
 import Item from "../Item";
+import "./itemList.css";
 
 function ItemList({ products }) {
   return (
-    <div>
-      <ul>
+    <div className="products-container">
+      <ul className="products-list">
         {products.map((product, index) => (
           <Item product={product} key={product.id} />
         ))}

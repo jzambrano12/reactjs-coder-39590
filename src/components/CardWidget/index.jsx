@@ -1,9 +1,10 @@
+import Bag from "../../assets/images/bag.svg";
 import "./cardWidget.css";
 
 function CardWidget() {
   return (
     <div className="card-widget">
-      <img src="https://cdn-icons-png.flaticon.com/512/2838/2838895.png" />
+      <img src={Bag} />
       <span>3</span>
     </div>
   );

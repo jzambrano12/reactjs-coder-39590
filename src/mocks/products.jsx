@@ -1,8 +1,8 @@
-import Product1 from "../assets/images/product_1.webp";
-import Product2 from "../assets/images/product_2.webp";
-import Product3 from "../assets/images/product_3.webp";
-import Product4 from "../assets/images/product_4.webp";
-import Product5 from "../assets/images/product_5.webp";
+import Pants from "../assets/images/Pants.jpeg";
+import Pants2 from "../assets/images/Pants2.jpeg";
+import Shoes from "../assets/images/Shoes.webp";
+import Shoes2 from "../assets/images/Shoes2.webp";
+import Shoes3 from "../assets/images/Shoes3.webp";
 
 export default [
   {
@@ -10,34 +10,39 @@ export default [
     name: "Product",
     description: "Lorem ipsum",
     stock: 5,
-    image: Product1,
+    image: Shoes,
+    category: "shoes",
   },
   {
     id: 2,
     name: "Product",
     description: "Lorem ipsum",
     stock: 5,
-    image: Product2,
+    image: Pants,
+    category: "pants",
   },
   {
     id: 3,
     name: "Product",
     description: "Lorem ipsum",
     stock: 5,
-    image: Product3,
+    image: Pants2,
+    category: "pants",
   },
   {
     id: 4,
     name: "Product",
     description: "Lorem ipsum",
     stock: 5,
-    image: Product4,
+    image: Shoes2,
+    category: "shoes",
   },
   {
     id: 5,
     name: "Product",
     description: "Lorem ipsum",
     stock: 5,
-    image: Product5,
+    image: Shoes3,
+    category: "shoes",
   },
 ];

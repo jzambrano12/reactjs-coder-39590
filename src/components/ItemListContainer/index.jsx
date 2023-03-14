@@ -4,7 +4,7 @@ import Products from "../../mocks/products";
 // Lista de productos
 import ItemList from "../ItemList";
 
-function ItemListContainer({ greeting }) {
+function ItemListContainer({ categoryId, isCategoryRoute }) {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -13,9 +13,18 @@ function ItemListContainer({ greeting }) {
     );
 
     productsPromise
-      .then((response) => setProducts(response))
+      .then((response) => {
+        if (isCategoryRoute) {
+          const productsFiltered = response.filter(
+            (product) => product.category === categoryId
+          );
+          setProducts(productsFiltered);
+        } else {
+          setProducts(response);
+        }
+      })
       .catch((err) => console.log(err));
-  }, []);
+  }, [categoryId]);
 
   return (
     <div>

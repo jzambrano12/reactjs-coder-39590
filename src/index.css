@@ -13,3 +13,30 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 80px);
+}
+
+.error-container > h1 {
+  font-size: 10rem;
+  font-weight: bold;
+}
+
+.error-message {
+  font-size: 1.5rem;
+  color: red;
+  font-weight: bold;
+}
+
+.btn-back-to-home {
+  background: black;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+}

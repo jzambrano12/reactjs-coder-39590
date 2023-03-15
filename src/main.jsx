@@ -6,6 +6,7 @@ import "./index.css";
 // Routes
 import Layout from "./components/Layout";
 import Cart from "./routes/cart";
+import ErrorPage from "./routes/error-page";
 import Item from "./routes/item";
 import Root from "./routes/root";
 
@@ -13,6 +14,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
+    path: "/",
+    errorElement: <ErrorPage />,
     element: <Layout />,
     children: [
       {

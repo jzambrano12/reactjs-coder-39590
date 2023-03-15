@@ -1,13 +1,11 @@
-import NavBar from "../components/NavBar";
 import ItemDetailContainer from "../components/itemDetailContainer";
 
-function ItemRoot() {
+function Item() {
   return (
     <div>
-      <NavBar />
       <ItemDetailContainer />
     </div>
   );
 }
 
-export default ItemRoot;
+export default Item;

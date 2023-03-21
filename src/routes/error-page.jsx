@@ -1,6 +1,7 @@
 import { Container } from "react-bootstrap";
 import { Link, useRouteError } from "react-router-dom";
 import NavBar from "../components/NavBar";
+import "../styles/error-page.css";
 
 function ErrorPage() {
   const error = useRouteError();

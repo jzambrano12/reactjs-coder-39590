@@ -1,10 +1,12 @@
+import { Container } from "react-bootstrap";
 import ItemDetailContainer from "../components/itemDetailContainer";
+import "../styles/routes.css";
 
 function Item() {
   return (
-    <div>
+    <Container className="route-container">
       <ItemDetailContainer />
-    </div>
+    </Container>
   );
 }
 

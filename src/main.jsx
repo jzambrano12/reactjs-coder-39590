@@ -1,10 +1,12 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import ReactDOM from "react-dom/client";
+
 import "./index.css";
 
 // Routes
 import Layout from "./components/Layout";
+import { CustomProvider } from "./context";
 import Cart from "./routes/cart";
 import ErrorPage from "./routes/error-page";
 import Item from "./routes/item";
@@ -44,6 +46,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <CustomProvider>
+      <RouterProvider router={router} />
+    </CustomProvider>
   </React.StrictMode>
 );

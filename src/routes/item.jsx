@@ -1,5 +1,5 @@
 import { Container } from "react-bootstrap";
-import ItemDetailContainer from "../components/itemDetailContainer";
+import ItemDetailContainer from "../components/ItemDetailContainer";
 import "../styles/routes.css";
 
 function Item() {

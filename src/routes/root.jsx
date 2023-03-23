@@ -1,16 +1,12 @@
-import { useContext } from "react";
 import { Container } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import ItemListContainer from "../components/ItemListContainer";
-import { Context, CustomProvider } from "../context";
+import { CustomProvider } from "../context";
 import "../styles/routes.css";
 
 function Root() {
   const params = useParams();
   const isCategoryRoute = Boolean(params.id);
-  const contextValues = useContext(Context);
-
-  console.log({ contextValues });
 
   return (
     <CustomProvider>

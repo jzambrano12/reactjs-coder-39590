@@ -14,6 +14,19 @@ import Root from "./routes/root";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+import { initializeApp } from "firebase/app";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyA1IMvwDj7lX8F9bu42gR8qjF3IarjoYlE",
+  authDomain: "ecommerce-39590-coder.firebaseapp.com",
+  projectId: "ecommerce-39590-coder",
+  storageBucket: "ecommerce-39590-coder.appspot.com",
+  messagingSenderId: "156958842349",
+  appId: "1:156958842349:web:95d3d8b9d1766c0d6f5be4",
+};
+
+initializeApp(firebaseConfig);
+
 const router = createBrowserRouter([
   {
     path: "/",

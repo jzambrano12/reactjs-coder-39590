@@ -7,10 +7,10 @@ function CardWidget() {
   const { itemsAddedQuantity } = useContext(Context);
 
   return (
-    <div className="card-widget">
+    <button className="card-widget">
       <img src={Bag} />
-      <span>{itemsAddedQuantity.length}</span>
-    </div>
+      {itemsAddedQuantity.length}
+    </button>
   );
 }
 

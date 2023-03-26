@@ -32,7 +32,7 @@ function NavBar() {
     >
       <Container>
         <Navbar.Brand href="#home">
-          <NavLink to="/">
+          <NavLink to="/" style={{ cursor: "pointer" }}>
             <img
               src="/logo.png"
               alt="Ecommerce logo"
@@ -45,10 +45,14 @@ function NavBar() {
         </Navbar.Brand>
         <Nav className="me-auto">
           <Nav.Link>
-            <NavLink to={"/category/shoes"}>Shoes</NavLink>
+            <NavLink to={"/category/shoes"} className="nav-link">
+              Shoes
+            </NavLink>
           </Nav.Link>
           <Nav.Link href="#features">
-            <NavLink to={"/category/pants"}>Pants</NavLink>
+            <NavLink to={"/category/pants"} className="nav-link">
+              Pants
+            </NavLink>
           </Nav.Link>
         </Nav>
         <CartWidget />

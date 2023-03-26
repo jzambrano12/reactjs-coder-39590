@@ -1,0 +1,15 @@
+.layout-container {
+  background-color: #0000000f;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  padding: 1rem 0;
+}
+
+.footer-container a {
+  font-weight: bold;
+  text-decoration: none;
+}

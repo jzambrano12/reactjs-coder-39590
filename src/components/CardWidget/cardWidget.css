@@ -1,6 +1,9 @@
 .card-widget {
   display: flex;
   align-items: center;
+  border: none;
+  background: transparent;
+  color: black;
 }
 
 .card-widget > img {

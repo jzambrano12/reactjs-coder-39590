@@ -1,5 +1,11 @@
+import { Container } from "react-bootstrap";
+
 function Cart() {
-  return <div>Cart view</div>;
+  return (
+    <Container className="route-container">
+      <h2>Cart view</h2>
+    </Container>
+  );
 }
 
 export default Cart;

@@ -1,0 +1,26 @@
+.item-count-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.controls-container {
+  display: flex;
+}
+
+.controls-container button {
+  border-radius: 0;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #21252ad3;
+  width: 50px;
+  color: white;
+}
+
+.add-to-cart {
+  margin-top: 0.5rem;
+}

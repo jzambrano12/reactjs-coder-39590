@@ -4,12 +4,12 @@ import { Context } from "../../context";
 import "./cardWidget.css";
 
 function CardWidget() {
-  const { itemsAddedQuantity } = useContext(Context);
+  const { productsAdded } = useContext(Context);
 
   return (
     <button className="card-widget">
       <img src={Bag} />
-      {itemsAddedQuantity.length}
+      {productsAdded.length}
     </button>
   );
 }

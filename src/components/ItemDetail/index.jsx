@@ -1,15 +1,18 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Button, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Pants from "../../assets/images/Pants.jpeg";
+import { Context } from "../../context";
 import ItemCount from "../ItemCount";
 import "./itemDetail.css";
 
 function ItemDetail({ product }) {
+  const { onAdd } = useContext(Context);
   const [added, setAdded] = useState(0);
 
-  function onAdd(count) {
+  function onAddProduct(count) {
     setAdded(count);
+    onAdd(product, count);
   }
 
   return (
@@ -25,7 +28,9 @@ function ItemDetail({ product }) {
           <span className="product-stock">Stock: {product.stock}</span>
 
           <div>
-            {added == 0 && <ItemCount stock={product.stock} onAdd={onAdd} />}
+            {added == 0 && (
+              <ItemCount stock={product.stock} onAdd={onAddProduct} />
+            )}
             <div className="ctas-container">
               {added >= 1 && (
                 <Link to="/cart">

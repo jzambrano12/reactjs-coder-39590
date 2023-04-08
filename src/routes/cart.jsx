@@ -21,6 +21,7 @@ function Cart() {
   }
 
   function sendOrder() {
+    const collectionRef = collection(db, "orders");
     const total = productsAdded.reduce(
       (acc, product) => acc + product.quantity * product.precio,
       0
@@ -32,12 +33,8 @@ function Cart() {
       total,
     };
 
-    const collectionRef = collection(db, "orders");
-
     addDoc(collectionRef, order)
-      .then((response) => {
-        const orderId = response.id;
-
+      .then(() => {
         productsAdded.map((product) => {
           const finalStock = product.stock - product.quantity;
           updateOrder(product.id, finalStock);

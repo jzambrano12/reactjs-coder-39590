@@ -13,6 +13,15 @@ import ItemList from "../ItemList";
 function ItemListContainer({ categoryId, isCategoryRoute }) {
   const [products, setProducts] = useState([]);
 
+  const getDocsFromFirebase = async (collection) => {
+    await getDocs(collection)
+      .then((snapshot) => {
+        const docs = snapshot.docs;
+        setProducts(docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+      })
+      .catch((error) => console.log({ error }));
+  };
+
   useEffect(() => {
     const db = getFirestore();
     const itemsCollection = collection(db, "items");
@@ -22,19 +31,10 @@ function ItemListContainer({ categoryId, isCategoryRoute }) {
         itemsCollection,
         where("category", "==", categoryId)
       );
-      getDocs(queryResult)
-        .then((snapshot) => {
-          const docs = snapshot.docs;
-          setProducts(docs.map((doc) => ({ id: doc.id, ...doc.data() })));
-        })
-        .catch((error) => console.log({ error }));
+
+      getDocsFromFirebase(queryResult);
     } else {
-      getDocs(itemsCollection)
-        .then((snapshot) => {
-          const docs = snapshot.docs;
-          setProducts(docs.map((doc) => ({ id: doc.id, ...doc.data() })));
-        })
-        .catch((error) => console.log({ error }));
+      getDocsFromFirebase(itemsCollection);
     }
   }, [categoryId]);
 
